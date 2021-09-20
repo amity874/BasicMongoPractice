@@ -3,18 +3,18 @@ const blogSchema=Mongoose.Schema({
     title:{
         type:String,
         required:true,
-        unicque:true
+        unique:true
     },
     description:{
         type:String,
-        require:true,
-        minLength:100
+        required:true,
+        minLength:10
     },
-    auther:{//auther is user and we alrady make it so we need user as a referrence
+    author:{//auther is user and we alrady make it so we need user as a referrence
         type: Mongoose.Schema.Types.ObjectId,
         ref:'user',
-        required:true
+        required:true,
     },
-
+    date:{type:String,default:Date},
 },{timestamps:true});
 module.exports=Mongoose.model('blog',blogSchema);

@@ -2,13 +2,13 @@ const Mongoose=require('mongoose');
 const userSchema=new Mongoose.Schema({
     firstName:{
     type: String,
-    require:true
+    required:true
     },
     lastName:String,
     email:{
         type:String,
         required:true,
-        unique:true//this is not a validation it's an index
+        unique:true//this is not a validation it's an index and make unique
     },
     underAge:{
         type:Number,

@@ -8,7 +8,7 @@ const getUserByid=(id)=>{
 
 const updateUserByid=(id,params)=>{
     return user.findByIdAndUpdate(id,params,{new:true}).exec();
-}
+} 
 module.exports={
     getAllUsers,
     getUserByid,
